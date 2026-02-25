@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Register - HIVI! Web</title>
+    
+<meta name="viewport" content="width=device-width, initiak-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="register-container">
+
+    <h2>Register</h2>
+
+    <input type="text" id="nama" placeholder="Nama">
+
+    <input type="email" id="email" placeholder="Email">
+
+    <button onclick="register()">Register</button>
+
+</div>
+
+
+<div class="footer">
+Web Statis HIVI! <br>
+Dibuat oleh Zaskia Dwi Ananda Firna XI.10
+</div>
+
+
+<script>
+
+function register(){
+
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+
+    if(nama == "" || email == ""){
+
+        alert("Isi semua data!");
+
+        return;
+    }
+
+    localStorage.setItem("nama", nama);
+    localStorage.setItem("email", email);
+
+    alert("Register berhasil!\nUsername: " + nama + "\nPassword: " + nama + "2026");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login - HIVI! Web</title>
+    
+<meta name="viewport" content="width=device-width, initiak-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="login-container">
+
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div class="link">
+        Belum punya akun?
+        <a href="register.html">Register</a>
+    </div>
+
+</div>
+
+
+<div class="footer">
+Web Statis HIVI! <br>
+Dibuat oleh Zaskia Dwi Ananda Firna XI.10
+</div>
+
+
+<script>
+
+function login(){
+
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    /* LOGIN ADMIN */
+    if(user == "zaskia" && pass == "zaskia2026"){
+
+        alert("Login Admin berhasil");
+
+        window.location.href = "admin.html";
+
+        return;
+    }
+
+    /* LOGIN USER */
+    let savedUser = localStorage.getItem("nama");
+    let savedPass = savedUser + "2026";
+
+    if(user == savedUser && pass == savedPass){
+
+        alert("Login berhasil");
+
+        window.location.href = "index.html";
+
+    }else{
+
+        alert("Username atau Password salah");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

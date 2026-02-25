@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri HiVi!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<div class="gallery-container">
+
+    <img src="img/hivi1.jpg" class="gallery-img" onclick="toggleColor(this)">
+    
+    <img src="img/hivi2.jpg" class="gallery-img" onclick="toggleColor(this)">
+    
+    <img src="img/hivi3.jpg" class="gallery-img" onclick="toggleColor(this)">
+    
+    <img src="img/hivi4.jpg" class="gallery-img" onclick="toggleColor(this)">
+
+</div>
+
+<button class="menu-btn" onclick="location.href='index.html'">
+    Kembali
+</button>
+
+<div class="footer">
+    Web Statis HIVI!<br>
+    Dibuat oleh Zaskia Dwi Ananda Firna XI.10
+</div>
+
+<script>
+function toggleColor(img){
+
+    img.classList.toggle("active");
+
+}
+</script>
+
+</body>
+</html>
